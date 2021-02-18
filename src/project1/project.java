@@ -23,59 +23,75 @@ public class project {
 			switch (select) {
 				case "1" :
 					System.out.println("--------------------------------------------------------------------------");
-					System.out.println("번호	제목	내용	글쓴이	조회수");
+					System.out.println("번호		제목		내용		글쓴이		조회수");
 					System.out.println("--------------------------------------------------------------------------");
 					
+					max = 0;				
+					for (i = 0; i < boardArry.length; i++) {
+						if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) >= max) {
+							max = Integer.parseInt(boardArry[i][0]);
+						}
+					}
+					
+					boolean button = true;
+					
+					while (button ) {
+						for (i = 0; i < boardArry.length; i++) {
+							if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) == max) {
+								System.out.println(boardArry[i][0] + "		" + boardArry[i][1] + "		" + boardArry[i][2] + "		" + boardArry[i][3] + "		" + boardArry[i][4]);
+								max--;
+							} else if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) < max && max != 0) {								
+								max--;
+							}
+							for (i = 0; i < boardArry.length; i++) {
+								
+							}
+						}
+						
+						/*for (i = 0; i < boardArry.length; i++) {
+							if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) < max && max != 0) {
+								//System.out.println(max);
+								max--;
+								break;
+							}	
+						}*/
+						
+						if (max == 0) {
+							button = false;
+						}
+					}
+													
+					break;
+					
+				case "2" :
 					max = 0;				
 					for (i = 0; i < boardArry.length; i++) {
 						if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) > max) {
 							max = Integer.parseInt(boardArry[i][0]);
 						}
 					}
-							
-					for (i = max-1; i >= 0; i--) {
-						if (boardArry[i][0] != null) {
-							System.out.println(boardArry[i][0] + "	" + boardArry[i][1] + "	" + boardArry[i][2] + "	" + boardArry[i][3] + "	" + boardArry[i][4]);
-						}
-					}
-								
-					break;
 					
-				case "2" :
-					for (i = 0; i < boardArry.length; i++) {
-						max = 0; 
-						for (i = 0; i < boardArry.length; i++) {
-							//if (boardArry[i][0]) != null && Integer.parseInt(boardArry[i][0]) > max)) {
-								max = Integer.parseInt(boardArry[i][0]);
-							}
-						}
-						
+					for (i = 0; i < boardArry.length; i++) {						
+												
 						if (boardArry[i][0] == null) {
-							
-							boardArry[i][0] = String.valueOf(i+1);
-							
+							if (i+1 == max) {
+								boardArry[i][0] = String.valueOf(i+1);
+							} else {
+								boardArry[i][0] = String.valueOf(max+1);
+							}
+
 							System.out.print("제목: ");
 							boardArry[i][1] = scanner.nextLine();
 							System.out.print("내용: ");
 							boardArry[i][2] = scanner.nextLine();
 							System.out.print("글쓴이: ");
 							boardArry[i][3] = scanner.nextLine();
-							
 							boardArry[i][4] = "0";
 							
-							/*for (int j = 0; j < boardArry[i].length; j++) {
-								System.out.println(boardArry[i][j] + ", ");
-							}*/
-					max = 0;
-					for (i = 0; i < boardArry.length; i++) {
-					if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) > max) {
-							max = Integer.parseInt(boardArry[i][0]);
-						}
-							}
-					boardArry[i][0] = String.valueOf(max);
-							
 							break;
+
 						}
+			
 					}
 					
 					break;
