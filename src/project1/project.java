@@ -43,7 +43,7 @@ public class project {
 							}
 						}
 						
-						if (max == compare) { // 삭제된 행이 있으면 max와 compare이 동일 해짐 --> 삭제 된 행 건너 뛰게 하기 위해
+						if (max == compare) { // 삭제된 행이 있으면 max와 compare이 동일 해짐 --> 삭제 된 행 밑의 번호 배열 출력 하기 위해
 							max--;
 						} else {
 							compare--; // 삭제된 행이 없을 경우
