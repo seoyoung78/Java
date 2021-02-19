@@ -23,7 +23,7 @@ public class project {
 			switch (select) {
 				case "1" :
 					System.out.println("--------------------------------------------------------------------------");
-					System.out.println("번호		제목		내용		글쓴이		조회수");
+					System.out.println("번호\t\t제목\t\t내용\t\t글쓴이\t\t조회수");
 					System.out.println("--------------------------------------------------------------------------");
 					
 					max = 0;				
@@ -35,27 +35,16 @@ public class project {
 					
 					boolean button = true;
 					
-					while (button ) {
+					while (button) {
 						for (i = 0; i < boardArry.length; i++) {
 							if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) == max) {
-								System.out.println(boardArry[i][0] + "		" + boardArry[i][1] + "		" + boardArry[i][2] + "		" + boardArry[i][3] + "		" + boardArry[i][4]);
+								System.out.println(boardArry[i][0] + "\t\t" + boardArry[i][1] + "\t\t" + boardArry[i][2] + "\t\t" + boardArry[i][3] + "\t\t" + boardArry[i][4]);
 								max--;
-							} else if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) < max && max != 0) {								
-								max--;
-							}
-							for (i = 0; i < boardArry.length; i++) {
-								
-							}
+							} 
 						}
 						
-						/*for (i = 0; i < boardArry.length; i++) {
-							if (boardArry[i][0] != null && Integer.parseInt(boardArry[i][0]) < max && max != 0) {
-								//System.out.println(max);
-								max--;
-								break;
-							}	
-						}*/
 						
+		
 						if (max == 0) {
 							button = false;
 						}
