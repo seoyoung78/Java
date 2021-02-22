@@ -1,4 +1,4 @@
-package ch06homework;
+package ch06homework.package03;
 
 public class FieldInitValue {
 	//ÇÊµå

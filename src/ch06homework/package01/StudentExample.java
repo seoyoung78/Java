@@ -1,4 +1,4 @@
-package ch06homework;
+package ch06homework.package01;
 
 public class StudentExample {
 
