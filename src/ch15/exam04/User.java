@@ -1,4 +1,4 @@
-package ch15.exam03;
+package ch15.exam04;
 
 public class User {
 	private String id;
